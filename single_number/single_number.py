@@ -4,8 +4,26 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    # single = 0
+    # for i in arr:
+    #     count = 0
+    #     for j in arr:
+    #         if j == i:
+    #             count += 1
+    #     if count == 1:
+    #         single = i
+    
+    # return single
+    counts = dict()
+    for i in arr:
+        # if counts.get(i) didn't exist, it would be 0
+        # hence the get(i, 0)
+        # if it does exist, you add one to it
+        counts[i] = counts.get(i, 0) + 1
 
-    pass
+    for x, y in counts.items():
+        if y == 1:
+            return x
 
 
 if __name__ == '__main__':
