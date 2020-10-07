@@ -4,8 +4,15 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
+    new_arr = [0] * len(arr)
+    for i in range(len(arr)):
+        product = 1
+        for j in arr:
+            if j != arr[i]:
+                product = product * j
+        new_arr[i] = product
+    return new_arr
+    
 
 
 if __name__ == '__main__':
