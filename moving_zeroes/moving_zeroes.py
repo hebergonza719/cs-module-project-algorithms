@@ -12,7 +12,6 @@ def moving_zeroes(arr):
             arr_sorted.insert(0, arr[i])
     return arr_sorted
 
-
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
     arr = [0, 3, 1, 0, -2]

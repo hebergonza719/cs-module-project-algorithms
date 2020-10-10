@@ -10,8 +10,9 @@ def sliding_window_max(nums, k):
 
     for i in range(len(nums) - (k-1)):
         window = nums[i:(i + k)]
-        window.sort()
-        new_array.append(window[-1])
+        # window.sort()
+        # new_array.append(window[-1])
+        new_array.append(max(window))
 
     return new_array 
 
